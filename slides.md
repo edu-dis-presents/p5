@@ -340,8 +340,8 @@ Consumer -> Channel: consume
 Channel <- AMQP: message
 Channel -> Handler
 Handler -> Handler: handle event
-Channel <- Handler: ask
-Channel -> AMQP: ask
+Channel <- Handler: ack
+Channel -> AMQP: ack
 AMQP -> AMQP: delete message 
 
 
